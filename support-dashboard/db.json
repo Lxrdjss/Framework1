@@ -1,19 +1,49 @@
 {
-  "posts": [
+  "tickets": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "title": "Impossible de se connecter au portail",
+      "description": "Le client obtient une erreur 403 depuis ce matin.",
+      "status": "open",
+      "priority": "high",
+      "assignee": "Sofia",
+      "createdAt": "2026-09-01T08:30:00.000Z"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "title": "Export CSV tronque a 1000 lignes",
+      "description": "L'export s'arrete systematiquement au bout de 1000 lignes.",
+      "status": "in_progress",
+      "priority": "medium",
+      "assignee": "Karim",
+      "createdAt": "2026-09-02T14:10:00.000Z"
+    },
+    {
+      "id": 3,
+      "title": "Changement d'adresse de facturation",
+      "description": "Mise a jour des coordonnees du compte client.",
+      "status": "closed",
+      "priority": "low",
+      "assignee": "Sofia",
+      "createdAt": "2026-09-03T09:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "title": "Lenteur sur la page des rapports",
+      "description": "Temps de chargement superieur a 15 secondes en heure de pointe.",
+      "status": "open",
+      "priority": "medium",
+      "assignee": "Lucas",
+      "createdAt": "2026-09-04T11:45:00.000Z"
+    },
+    {
+      "id": 5,
+      "title": "Notification email non recue",
+      "description": "Le client ne recoit plus les alertes de fin de traitement.",
+      "status": "in_progress",
+      "priority": "high",
+      "assignee": "Lucas",
+      "createdAt": "2026-09-05T16:20:00.000Z"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
