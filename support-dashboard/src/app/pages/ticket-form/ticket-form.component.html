@@ -1,1 +1,54 @@
-<p>ticket-form works!</p>
+<h2>{{ ticketId === null ? "Nouveau ticket" : "Modifier le ticket" }}</h2>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <p>
+    <label>Titre</label><br />
+    <input type="text" formControlName="title" />
+    @if (form.controls.title.touched && form.controls.title.invalid) {
+      <span>Titre requis (5 caracteres minimum).</span>
+    }
+  </p>
+
+  <p>
+    <label>Description</label><br />
+    <textarea formControlName="description" rows="4"></textarea>
+    @if (
+      form.controls.description.touched && form.controls.description.invalid
+    ) {
+      <span>Description requise (10 caracteres minimum).</span>
+    }
+  </p>
+
+  <p>
+    <label>Statut</label><br />
+    <select formControlName="status">
+      @for (status of statuses; track status) {
+        <option [value]="status">{{ status }}</option>
+      }
+    </select>
+  </p>
+
+  <p>
+    <label>Priorite</label><br />
+    <select formControlName="priority">
+      @for (priority of priorities; track priority) {
+        <option [value]="priority">{{ priority }}</option>
+      }
+    </select>
+  </p>
+
+  <p>
+    <label>Assigne a</label><br />
+    <input type="text" formControlName="assignee" />
+    @if (form.controls.assignee.touched && form.controls.assignee.invalid) {
+      <span>Champ requis.</span>
+    }
+  </p>
+
+  @if (error) {
+    <p>{{ error }}</p>
+  }
+
+  <button type="submit" [disabled]="submitting">Enregistrer</button>
+  <a routerLink="/tickets">Annuler</a>
+</form>
