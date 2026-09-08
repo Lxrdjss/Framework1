@@ -1,1 +1,16 @@
-<p>ticket-detail works!</p>
+@if (error) {
+  <p>{{ error }}</p>
+} @else if (ticket) {
+  <h2>{{ ticket.title }}</h2>
+  <p>{{ ticket.description }}</p>
+  <ul>
+    <li>Statut : {{ ticket.status }}</li>
+    <li>Priorite : {{ ticket.priority }}</li>
+    <li>Assigne a : {{ ticket.assignee }}</li>
+    <li>Cree le : {{ ticket.createdAt }}</li>
+  </ul>
+  <a [routerLink]="['/tickets', ticket.id, 'edit']">Modifier</a>
+  <a routerLink="/tickets">Retour</a>
+} @else {
+  <p>Chargement...</p>
+}
