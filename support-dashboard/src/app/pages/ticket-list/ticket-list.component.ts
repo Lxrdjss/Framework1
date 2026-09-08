@@ -20,6 +20,21 @@ export class TicketListComponent implements OnInit {
     this.load();
   }
 
+  onDelete(ticket: Ticket): void {
+    if (!confirm(`Supprimer le ticket "${ticket.title}" ?`)) {
+      return;
+    }
+
+    this.ticketService.remove(ticket.id).subscribe({
+      next: () => {
+        this.tickets = this.tickets.filter((t) => t.id !== ticket.id);
+      },
+      error: () => {
+        this.error = 'La suppression a echoue.';
+      },
+    });
+  }
+
   private load(): void {
     this.loading = true;
     this.ticketService.getAll().subscribe({

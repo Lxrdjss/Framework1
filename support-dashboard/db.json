@@ -1,15 +1,6 @@
 {
   "tickets": [
     {
-      "id": 1,
-      "title": "Impossible de se connecter au portail",
-      "description": "Le client obtient une erreur 403 depuis ce matin.",
-      "status": "open",
-      "priority": "high",
-      "assignee": "Sofia",
-      "createdAt": "2026-09-01T08:30:00.000Z"
-    },
-    {
       "id": 2,
       "title": "Export CSV tronque a 1000 lignes",
       "description": "L'export s'arrete systematiquement au bout de 1000 lignes.",

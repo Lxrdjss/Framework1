@@ -25,6 +25,7 @@
           <td>
             <a [routerLink]="['/tickets', ticket.id]">Voir</a>
             <a [routerLink]="['/tickets', ticket.id, 'edit']">Modifier</a>
+            <button type="button" (click)="onDelete(ticket)">Supprimer</button>
           </td>
         </tr>
       } @empty {
