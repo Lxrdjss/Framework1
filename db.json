@@ -1,0 +1,31 @@
+{
+  "tickets": [
+    {
+      "id": 1,
+      "title": "Impossible de se connecter au portail",
+      "description": "Le client obtient une erreur 403 depuis ce matin.",
+      "status": "open",
+      "priority": "high",
+      "assignee": "Sofia",
+      "createdAt": "2026-09-01T08:30:00.000Z"
+    },
+    {
+      "id": 2,
+      "title": "Export CSV tronqué",
+      "description": "L'export s'arrête à 1000 lignes.",
+      "status": "in_progress",
+      "priority": "medium",
+      "assignee": "Karim",
+      "createdAt": "2026-09-02T14:10:00.000Z"
+    },
+    {
+      "id": 3,
+      "title": "Demande de changement d'adresse de facturation",
+      "description": "Mise à jour des coordonnées du compte.",
+      "status": "closed",
+      "priority": "low",
+      "assignee": "Sofia",
+      "createdAt": "2026-09-03T09:00:00.000Z"
+    }
+  ]
+}
