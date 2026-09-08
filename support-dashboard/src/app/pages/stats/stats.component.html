@@ -1,1 +1,21 @@
-<p>stats works!</p>
+<h2>Statistiques</h2>
+
+@if (stats) {
+  <p>Total : {{ stats.total }} ticket(s)</p>
+
+  <h3>Par statut</h3>
+  <ul>
+    @for (status of statuses; track status) {
+      <li>{{ status }} : {{ stats.byStatus[status] }}</li>
+    }
+  </ul>
+
+  <h3>Par priorite</h3>
+  <ul>
+    @for (priority of priorities; track priority) {
+      <li>{{ priority }} : {{ stats.byPriority[priority] }}</li>
+    }
+  </ul>
+} @else {
+  <p>Chargement...</p>
+}
